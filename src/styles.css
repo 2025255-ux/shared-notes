@@ -142,3 +142,16 @@
     color: var(--color-foreground);
   }
 }
+
+@theme inline {
+  --font-sans: "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Noto Serif JP", ui-serif, serif;
+  --color-on-scene: var(--on-scene);
+  --color-scene: var(--scene);
+}
+:root { --on-scene: oklch(0.99 0 0); --scene: oklch(0.2 0 0); }
+.scene-overlay { background: linear-gradient(to bottom, oklch(0 0 0 / 40%), oklch(0 0 0 / 25%), oklch(0 0 0 / 55%)); }
+.pill-button { display:inline-flex; align-items:center; gap:.75rem; border-radius:9999px; background: oklch(0.99 0 0 / 95%); color: oklch(0.2 0 0); padding: 1rem 2rem; font-size:.875rem; font-weight:500; box-shadow: 0 20px 25px -5px oklch(0 0 0 / 30%); transition: transform .15s; }
+.pill-button:active { transform: scale(.95); }
+.field { width:100%; border-radius:.75rem; border:1px solid var(--color-input); background: var(--color-background); padding:.75rem 1rem; font-size:1rem; outline:none; }
+.field:focus { border-color: var(--color-ring); }
